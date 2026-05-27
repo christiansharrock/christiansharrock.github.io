@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christian — Aspiring Game Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="scanlines"></div>
+
+  <!-- ── NAV ── -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-logo">
+      <span class="bracket">[</span>CHRISTIAN<span class="bracket">]</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#projects">QUESTS</a></li>
+      <li><a href="#skills">SKILLS</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-pre"><span class="blink">▶</span> PLAYER ONE HAS ENTERED THE GAME</p>
+      <h1 class="hero-title glitch" data-text="CHRISTIAN">CHRISTIAN</h1>
+      <p class="hero-sub"><span id="typewriter"></span><span class="blink">█</span></p>
+      <div class="hero-stats">
+        <div class="stat-row">
+          <span class="stat-lbl">HP</span>
+          <div class="stat-bar"><div class="stat-fill hp"></div></div>
+          <span class="stat-val">100/100</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-lbl">XP</span>
+          <div class="stat-bar"><div class="stat-fill xp"></div></div>
+          <span class="stat-val">GRINDING</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-lbl">LVL</span>
+          <div class="stat-bar"><div class="stat-fill lvl"></div></div>
+          <span class="stat-val">001</span>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">VIEW QUESTS</a>
+        <a href="#contact" class="btn btn-outline">SEND MESSAGE</a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>SCROLL</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-pre">// PROFILE.exe</span>
+        <h2 class="section-title">CHARACTER INFO</h2>
+      </div>
+      <div class="about-grid">
+        <div class="char-card">
+          <div class="char-avatar">
+            <div class="pixel-char">
+              <div class="px-head"></div>
+              <div class="px-body"><span>DEV</span></div>
+              <div class="px-legs"><div></div><div></div></div>
+            </div>
+          </div>
+          <div class="char-meta">
+            <div class="char-name">CHRISTIAN</div>
+            <div class="char-class">CLASS: Game Developer</div>
+            <div class="char-level">LEVEL <span class="gold">1</span></div>
+            <div class="char-badges">
+              <span class="badge green">JAVA</span>
+              <span class="badge blue">OOP</span>
+              <span class="badge gold">GAME LOGIC</span>
+            </div>
+          </div>
+        </div>
+        <div class="terminal-box">
+          <div class="terminal-bar">
+            <span class="tdot red"></span>
+            <span class="tdot yellow"></span>
+            <span class="tdot green"></span>
+            <span class="tfile">christian_profile.txt</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="prompt">$</span> <span class="cmd">cat bio.txt</span></p>
+            <p class="out">
+              Aspiring game developer on a mission to craft immersive<br>
+              digital worlds. Currently leveling up coding skills,<br>
+              one project at a time. The journey started with a Java<br>
+              Blackjack game — and the adventure is just beginning.
+            </p>
+            <p><span class="prompt">$</span> <span class="cmd">cat goals.txt</span></p>
+            <p class="out">
+              → Build engaging, fun games<br>
+              → Master game development fundamentals<br>
+              → Create experiences players remember<br>
+              → Ship it. Learn. Repeat.
+            </p>
+            <p><span class="prompt">$</span> <span class="blink">█</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section class="section dark" id="projects">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-pre">// QUEST_LOG.json</span>
+        <h2 class="section-title">ACTIVE QUESTS</h2>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Blackjack -->
+        <div class="project-card featured">
+          <div class="project-glow"></div>
+          <div class="project-badges">
+            <span class="badge green">COMPLETED ✓</span>
+            <span class="badge gold">FEATURED ★</span>
+          </div>
+          <div class="project-icon">🃏</div>
+          <h3 class="project-title">BLACKJACK</h3>
+          <div class="project-meta">
+            <span class="tag">JAVA</span>
+            <span class="tag">CARD GAME</span>
+          </div>
+          <p class="project-desc">
+            The origin story. A fully functional Blackjack game built from scratch in Java —
+            complete with dealer AI, a betting system, hit/stand mechanics, and proper
+            casino rules. First project. First quest completed.
+          </p>
+          <div class="project-tags">
+            <span class="chip">Java</span>
+            <span class="chip">OOP</span>
+            <span class="chip">Game Logic</span>
+            <span class="chip">Card Game</span>
+          </div>
+          <div class="project-actions">
+            <a href="blackjack/" class="btn btn-primary btn-sm">▶ PLAY NOW</a>
+            <a href="#" class="btn btn-outline btn-sm">&lt;/&gt; SOURCE</a>
+          </div>
+        </div>
+
+        <!-- Locked 1 -->
+        <div class="project-card locked">
+          <div class="project-badges"><span class="badge dim">🔒 LOCKED</span></div>
+          <div class="project-icon" style="opacity:.3">❓</div>
+          <h3 class="project-title dim">???</h3>
+          <p class="project-desc dim">New quest incoming. Keep an eye on this space...</p>
+          <div class="xp-bar-wrap">
+            <div class="xp-bar"><div class="xp-fill" style="width:0%"></div></div>
+            <span class="xp-label">0% COMPLETE</span>
+          </div>
+        </div>
+
+        <!-- Locked 2 -->
+        <div class="project-card locked">
+          <div class="project-badges"><span class="badge dim">🔒 LOCKED</span></div>
+          <div class="project-icon" style="opacity:.3">❓</div>
+          <h3 class="project-title dim">???</h3>
+          <p class="project-desc dim">Quest not yet discovered. Check back later.</p>
+          <div class="xp-bar-wrap">
+            <div class="xp-bar"><div class="xp-fill" style="width:0%"></div></div>
+            <span class="xp-label">0% COMPLETE</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-pre">// SKILL_TREE.dat</span>
+        <h2 class="section-title">SKILL TREE</h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">LANGUAGES</h3>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">Java</span>
+              <span class="skill-lv">LVL 6</span>
+            </div>
+            <div class="xp-bar"><div class="xp-fill animate" data-xp="60"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">HTML / CSS</span>
+              <span class="skill-lv">LVL 2</span>
+            </div>
+            <div class="xp-bar"><div class="xp-fill animate" data-xp="20"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">GAME DEV</h3>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">Game Logic</span>
+              <span class="skill-lv">LVL 5</span>
+            </div>
+            <div class="xp-bar"><div class="xp-fill animate" data-xp="50"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">OOP Design</span>
+              <span class="skill-lv">LVL 4</span>
+            </div>
+            <div class="xp-bar"><div class="xp-fill animate" data-xp="40"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">ATTRIBUTES</h3>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">Problem Solving</span>
+              <span class="skill-lv">LVL 8</span>
+            </div>
+            <div class="xp-bar"><div class="xp-fill animate" data-xp="80"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">Passion</span>
+              <span class="skill-lv gold-text">MAX ★</span>
+            </div>
+            <div class="xp-bar"><div class="xp-fill animate gold-bar" data-xp="100"></div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section class="section dark" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-pre">// SEND_MESSAGE.exe</span>
+        <h2 class="section-title">CONTACT</h2>
+      </div>
+      <div class="contact-wrap">
+        <p class="contact-intro">
+          Want to collaborate, hire, or just talk games?<br>Let's connect.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:christian@example.com" class="contact-card">
+            <span class="contact-icon">✉</span>
+            <span class="contact-lbl">EMAIL</span>
+          </a>
+          <a href="https://github.com" target="_blank" class="contact-card">
+            <span class="contact-icon">⌥</span>
+            <span class="contact-lbl">GITHUB</span>
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="contact-card">
+            <span class="contact-icon">◆</span>
+            <span class="contact-lbl">LINKEDIN</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-copy">
+        <span class="green">CHRISTIAN</span> &copy; 2024 &mdash;
+        CRAFTED WITH <span class="red">♥</span> AND COUNTLESS CUPS OF COFFEE
+      </p>
+      <p class="footer-sub">
+        <span class="blink">█</span>&nbsp; GAME DEVELOPER IN TRAINING &mdash; LVL 1 CLEARED
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

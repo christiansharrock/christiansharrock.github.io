@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blackjack — Christian's Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="scanlines"></div>
+
+  <!-- ── BACK NAV ── -->
+  <div class="top-bar">
+    <a href="../" class="back-btn">← BACK TO PORTFOLIO</a>
+    <span class="top-title">BLACKJACK <span class="java-badge">JAVA PORT</span></span>
+    <div class="top-credits">
+      CHIPS: <span id="creditsDisplay">1000</span>
+    </div>
+  </div>
+
+  <!-- ── TABLE ── -->
+  <main class="table">
+
+    <!-- ── DEALER ── -->
+    <div class="zone dealer-zone">
+      <div class="zone-label">DEALER <span id="dealerScore" class="score-badge"></span></div>
+      <div class="hand" id="dealerHand"></div>
+    </div>
+
+    <!-- ── MESSAGE ── -->
+    <div class="message-area">
+      <div id="message" class="message"></div>
+    </div>
+
+    <!-- ── PLAYER ── -->
+    <div class="zone player-zone">
+      <div class="zone-label">YOU <span id="playerScore" class="score-badge"></span></div>
+      <div class="hand" id="playerHand"></div>
+    </div>
+
+    <!-- ── BET / CONTROLS ── -->
+    <div class="controls-wrap">
+
+      <!-- Betting phase -->
+      <div id="betPanel" class="panel">
+        <div class="bet-row">
+          <span class="panel-lbl">BET AMOUNT</span>
+          <div class="chip-buttons">
+            <button class="chip-btn" data-amount="10">$10</button>
+            <button class="chip-btn" data-amount="25">$25</button>
+            <button class="chip-btn" data-amount="50">$50</button>
+            <button class="chip-btn" data-amount="100">$100</button>
+          </div>
+        </div>
+        <div class="bet-display">
+          CURRENT BET: <span id="betDisplay" class="bet-amount">0</span>
+        </div>
+        <div class="bet-actions">
+          <button id="clearBetBtn" class="btn-game secondary">CLEAR</button>
+          <button id="dealBtn" class="btn-game primary">DEAL ▶</button>
+        </div>
+      </div>
+
+      <!-- Playing phase -->
+      <div id="playPanel" class="panel" hidden>
+        <div class="play-info">
+          BET: <span id="currentBetDisplay" class="bet-amount"></span>
+          &nbsp;|&nbsp;
+          CHIPS: <span id="chipsInPlay" class="bet-amount"></span>
+        </div>
+        <div class="play-buttons">
+          <button id="hitBtn"    class="btn-game primary">HIT</button>
+          <button id="standBtn"  class="btn-game secondary">STAND</button>
+          <button id="doubleBtn" class="btn-game double">DOUBLE</button>
+        </div>
+      </div>
+
+      <!-- Result phase -->
+      <div id="resultPanel" class="panel" hidden>
+        <div id="resultMsg" class="result-msg"></div>
+        <button id="newGameBtn" class="btn-game primary">NEW HAND ▶</button>
+      </div>
+
+    </div>
+
+    <!-- ── JAVA NOTE ── -->
+    <div class="java-note">
+      <span class="note-icon">☕</span>
+      <span>Originally written in Java — this is a faithful browser port of Christian's first-ever project.</span>
+      <a href="../" class="note-link">View portfolio →</a>
+    </div>
+
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>

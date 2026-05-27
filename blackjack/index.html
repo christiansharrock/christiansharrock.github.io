@@ -13,89 +13,211 @@
 
   <div class="scanlines"></div>
 
-  <!-- ── BACK NAV ── -->
   <div class="top-bar">
-    <a href="../" class="back-btn">← BACK TO PORTFOLIO</a>
-    <span class="top-title">BLACKJACK <span class="java-badge">JAVA PORT</span></span>
-    <div class="top-credits">
-      CHIPS: <span id="creditsDisplay">1000</span>
-    </div>
+    <a href="../" class="back-btn">← PORTFOLIO</a>
+    <span class="top-title">🃏 BLACKJACK</span>
+    <span class="java-badge">JAVA</span>
   </div>
 
-  <!-- ── TABLE ── -->
-  <main class="table">
+  <main class="page">
 
-    <!-- ── DEALER ── -->
-    <div class="zone dealer-zone">
-      <div class="zone-label">DEALER <span id="dealerScore" class="score-badge"></span></div>
-      <div class="hand" id="dealerHand"></div>
-    </div>
+    <!-- ── HERO ── -->
+    <section class="proj-hero">
+      <div class="proj-hero-content">
+        <div class="status-row">
+          <span class="badge green">COMPLETED ✓</span>
+          <span class="badge gold">FIRST PROJECT ★</span>
+        </div>
+        <h1 class="proj-title">BLACKJACK</h1>
+        <p class="proj-sub">A Java CLI card game — the quest that started it all.</p>
+        <div class="proj-actions">
+          <a href="https://github.com" target="_blank" class="btn primary">&lt;/&gt; VIEW SOURCE</a>
+          <a href="#overview" class="btn outline">READ MORE ↓</a>
+        </div>
+      </div>
+      <div class="proj-hero-art">
+        <div class="card-fan">
+          <div class="fan-card" style="--r:-18deg; --tx:-50px; --c:#c0392b;">A<br>♥</div>
+          <div class="fan-card" style="--r:-6deg;  --tx:-16px; --c:#1a1a2e;">K<br>♠</div>
+          <div class="fan-card" style="--r: 6deg;  --tx: 16px; --c:#c0392b;">J<br>♦</div>
+          <div class="fan-card" style="--r: 18deg; --tx: 50px; --c:#1a1a2e;">Q<br>♣</div>
+        </div>
+      </div>
+    </section>
 
-    <!-- ── MESSAGE ── -->
-    <div class="message-area">
-      <div id="message" class="message"></div>
-    </div>
+    <!-- ── OVERVIEW ── -->
+    <section class="content-section" id="overview">
+      <div class="container">
 
-    <!-- ── PLAYER ── -->
-    <div class="zone player-zone">
-      <div class="zone-label">YOU <span id="playerScore" class="score-badge"></span></div>
-      <div class="hand" id="playerHand"></div>
-    </div>
+        <div class="detail-grid">
+          <div class="detail-main">
 
-    <!-- ── BET / CONTROLS ── -->
-    <div class="controls-wrap">
+            <div class="detail-block">
+              <h2 class="block-title">// OVERVIEW</h2>
+              <p class="block-text">
+                Blackjack was the very first project — built to learn Java by doing something fun.
+                The game runs entirely in the terminal, recreating the full casino experience with
+                a clean command-line interface. It proved that the best way to learn programming
+                is to build something you actually want to play.
+              </p>
+            </div>
 
-      <!-- Betting phase -->
-      <div id="betPanel" class="panel">
-        <div class="bet-row">
-          <span class="panel-lbl">BET AMOUNT</span>
-          <div class="chip-buttons">
-            <button class="chip-btn" data-amount="10">$10</button>
-            <button class="chip-btn" data-amount="25">$25</button>
-            <button class="chip-btn" data-amount="50">$50</button>
-            <button class="chip-btn" data-amount="100">$100</button>
+            <div class="detail-block">
+              <h2 class="block-title">// FEATURES</h2>
+              <ul class="feature-list">
+                <li>Full standard 52-card deck with proper shuffle logic</li>
+                <li>Player actions: <strong>Hit</strong>, <strong>Stand</strong>, <strong>Double Down</strong></li>
+                <li>Dealer AI — hits on 16, stands on 17</li>
+                <li>Blackjack detection (Ace + 10-value = instant win)</li>
+                <li>Ace soft/hard value handling (counts as 1 or 11)</li>
+                <li>Chip-based betting system with persistent balance</li>
+                <li>Win / Loss / Push / Bust outcomes</li>
+                <li>Play-again loop without restarting the program</li>
+              </ul>
+            </div>
+
+            <div class="detail-block">
+              <h2 class="block-title">// WHAT I LEARNED</h2>
+              <p class="block-text">
+                This project was a crash course in object-oriented design — modelling a
+                <code>Card</code>, <code>Deck</code>, <code>Hand</code>, and <code>Game</code>
+                as separate classes that interact cleanly. It also introduced game-loop thinking:
+                managing state, taking user input, branching on outcomes, and looping until the
+                player wants to quit.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- ── SIDEBAR ── -->
+          <aside class="detail-sidebar">
+            <div class="info-card">
+              <h3 class="info-title">PROJECT INFO</h3>
+              <div class="info-row">
+                <span class="info-lbl">LANGUAGE</span>
+                <span class="info-val java-text">☕ Java</span>
+              </div>
+              <div class="info-row">
+                <span class="info-lbl">TYPE</span>
+                <span class="info-val">CLI Card Game</span>
+              </div>
+              <div class="info-row">
+                <span class="info-lbl">STATUS</span>
+                <span class="info-val green-text">Complete ✓</span>
+              </div>
+              <div class="info-row">
+                <span class="info-lbl">DIFFICULTY</span>
+                <span class="info-val">
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h3 class="info-title">CONCEPTS USED</h3>
+              <div class="tag-cloud">
+                <span class="chip">OOP</span>
+                <span class="chip">Classes</span>
+                <span class="chip">ArrayLists</span>
+                <span class="chip">Scanner</span>
+                <span class="chip">Loops</span>
+                <span class="chip">Conditionals</span>
+                <span class="chip">Methods</span>
+                <span class="chip">Random</span>
+              </div>
+            </div>
+
+            <a href="https://github.com" target="_blank" class="github-cta">
+              <span class="gh-icon">⌥</span>
+              <div>
+                <div class="gh-title">VIEW ON GITHUB</div>
+                <div class="gh-sub">Source code & README</div>
+              </div>
+            </a>
+          </aside>
+        </div>
+
+        <!-- ── TERMINAL DEMO ── -->
+        <div class="detail-block">
+          <h2 class="block-title">// GAME PREVIEW</h2>
+          <p class="block-text" style="margin-bottom:1.2rem;">
+            The game runs in any terminal with Java installed.
+            Here's what a typical hand looks like:
+          </p>
+          <div class="terminal-box">
+            <div class="terminal-bar">
+              <span class="tdot red"></span>
+              <span class="tdot yellow"></span>
+              <span class="tdot green"></span>
+              <span class="tfile">Blackjack.java</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="t-out dim">╔══════════════════════════╗</span></p>
+              <p><span class="t-out dim">║   ♠  BLACKJACK  ♥        ║</span></p>
+              <p><span class="t-out dim">╚══════════════════════════╝</span></p>
+              <p><span class="t-out"></span></p>
+              <p><span class="t-out muted">Your chips: </span><span class="t-out gold">$980</span></p>
+              <p><span class="t-out muted">Place your bet: </span><span class="t-prompt">$ </span><span class="t-out">50</span></p>
+              <p><span class="t-out"></span></p>
+              <p><span class="t-out muted">DEALER shows: </span><span class="t-out red">7♥</span><span class="t-out muted">  [hidden]</span></p>
+              <p><span class="t-out muted">YOUR HAND:   </span><span class="t-out">K♠  </span><span class="t-out red">A♦</span><span class="t-out green">  = 21 🃏 BLACKJACK!</span></p>
+              <p><span class="t-out"></span></p>
+              <p><span class="t-out green">★ BLACKJACK! You win $75 (3:2 payout)</span></p>
+              <p><span class="t-out muted">Your chips: </span><span class="t-out gold">$1055</span></p>
+              <p><span class="t-out"></span></p>
+              <p><span class="t-out muted">Play again? (y/n): </span><span class="t-prompt">$ </span><span class="blink t-out">_</span></p>
+            </div>
           </div>
         </div>
-        <div class="bet-display">
-          CURRENT BET: <span id="betDisplay" class="bet-amount">0</span>
+
+        <div class="how-to-run">
+          <h2 class="block-title">// HOW TO RUN</h2>
+          <div class="run-steps">
+            <div class="run-step">
+              <span class="step-num">01</span>
+              <div class="step-content">
+                <div class="step-title">Clone the repo</div>
+                <div class="code-line"><span class="t-prompt">$</span> git clone https://github.com/your-username/blackjack-java</div>
+              </div>
+            </div>
+            <div class="run-step">
+              <span class="step-num">02</span>
+              <div class="step-content">
+                <div class="step-title">Compile</div>
+                <div class="code-line"><span class="t-prompt">$</span> javac Blackjack.java</div>
+              </div>
+            </div>
+            <div class="run-step">
+              <span class="step-num">03</span>
+              <div class="step-content">
+                <div class="step-title">Run &amp; play</div>
+                <div class="code-line"><span class="t-prompt">$</span> java Blackjack</div>
+              </div>
+            </div>
+          </div>
+          <p class="run-note">Requires Java 8 or higher. No external dependencies.</p>
         </div>
-        <div class="bet-actions">
-          <button id="clearBetBtn" class="btn-game secondary">CLEAR</button>
-          <button id="dealBtn" class="btn-game primary">DEAL ▶</button>
-        </div>
+
       </div>
+    </section>
 
-      <!-- Playing phase -->
-      <div id="playPanel" class="panel" hidden>
-        <div class="play-info">
-          BET: <span id="currentBetDisplay" class="bet-amount"></span>
-          &nbsp;|&nbsp;
-          CHIPS: <span id="chipsInPlay" class="bet-amount"></span>
-        </div>
-        <div class="play-buttons">
-          <button id="hitBtn"    class="btn-game primary">HIT</button>
-          <button id="standBtn"  class="btn-game secondary">STAND</button>
-          <button id="doubleBtn" class="btn-game double">DOUBLE</button>
-        </div>
-      </div>
-
-      <!-- Result phase -->
-      <div id="resultPanel" class="panel" hidden>
-        <div id="resultMsg" class="result-msg"></div>
-        <button id="newGameBtn" class="btn-game primary">NEW HAND ▶</button>
-      </div>
-
-    </div>
-
-    <!-- ── JAVA NOTE ── -->
-    <div class="java-note">
-      <span class="note-icon">☕</span>
-      <span>Originally written in Java — this is a faithful browser port of Christian's first-ever project.</span>
-      <a href="../" class="note-link">View portfolio →</a>
-    </div>
+    <!-- ── FOOTER ── -->
+    <footer class="proj-footer">
+      <a href="../" class="btn outline btn-sm">← BACK TO PORTFOLIO</a>
+      <span class="footer-text">Christian &copy; 2024</span>
+    </footer>
 
   </main>
 
-  <script src="game.js"></script>
+  <script>
+    // Stagger the fan cards in on load
+    document.querySelectorAll('.fan-card').forEach((c, i) => {
+      c.style.animationDelay = (i * 0.1) + 's';
+    });
+  </script>
 </body>
 </html>
